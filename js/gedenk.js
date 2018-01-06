@@ -1,4 +1,5 @@
 var rowH;
+var bgImage;
 var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
 
 if (isphone) {
@@ -39,7 +40,7 @@ $(function() {
         { file: 'images/14.jpg', w: 1341, h: 1159 }
     ];
     // pick one randomly
-    var bgImage = bgImages[Math.floor(Math.random() * bgImages.length)];
+    bgImage = bgImages[Math.floor(Math.random() * bgImages.length)]; // global var!
     var bgHorizontality = bgImage.w / bgImage.h;
     // get body dimensions
     var bodyW = $('body').width();
@@ -73,7 +74,6 @@ $(function() {
     $('header,.ruimte,h1').css('line-height', rowH + 'px').css('font-size', fontS + 'pt');
     // set the background image  
     $('header,.ruimte,.item:has(h1)')
-//        .css('background', '#607D8B')
         .css('background-image', 'url(' + bgImage.file + ')')
         .css('background-size', bgSize)
         .css('background-position-x', bgX + 'px');
@@ -249,7 +249,7 @@ Webflow.push(function () {
           subject: title,
           message: text,
           url: "http://gebeden.gelovenleren.net/" + anchor,
-          image: "http://gebeden.gelovenleren.net/images/03.jpg"
+          image: "http://gebeden.gelovenleren.net/" + bgImage.file
       }, function(activity, completed, error){
           console.log("Share " + completed ? 'Ok' : 'Failed');
       });
