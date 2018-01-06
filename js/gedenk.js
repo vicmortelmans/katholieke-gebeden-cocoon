@@ -85,8 +85,9 @@ $(function() {
     if (!isphone) {
         // something to do only on web
         $('footer').show();
-//    } else {
+    } else {
         // something to do only on app
+        $('.slide-arrow').width(0);
 //        document.addEventListener("deviceready", function(){
 //      		navigator.splashscreen.hide();
 //        }, false);
