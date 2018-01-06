@@ -82,12 +82,10 @@ $(function() {
       var actualIndex = rowCount - index - 1;
       $(this).css('background-position-y', (bgY - actualIndex * rowH) + 'px');
     });
-    if (!isphone) {
-        // something to do only on web
-        $('footer').show();
-    } else {
+    if (isphone) {
         // something to do only on app
         $('.slide-arrow').width(0);
+        $('#play').hide;
 //        document.addEventListener("deviceready", function(){
 //      		navigator.splashscreen.hide();
 //        }, false);
