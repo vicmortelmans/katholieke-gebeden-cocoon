@@ -10,6 +10,12 @@ if (isphone) {
   document.addEventListener("deviceready", function(){
       console.log("DEBUG in deviceready handler now");
   });
+} else {
+  // do the cordova stuff
+  var jsElm = document.createElement("script");
+  jsElm.type = "application/javascript";
+  jsElm.src = "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
+  document.body.appendChild(jsElm);
 }
 
 // jQuery ready handler takes care of layout and fetching daily readings
