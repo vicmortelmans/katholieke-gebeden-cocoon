@@ -11,7 +11,7 @@ if (isphone) {
       console.log("DEBUG in deviceready handler now");
   });
 } else {
-  // do the cordova stuff
+  // show the addthis share button
   var jsElm = document.createElement("script");
   jsElm.type = "application/javascript";
   jsElm.src = "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
@@ -238,14 +238,17 @@ Webflow.push(function () {
     $('#share').on('click', function() {
       var anchor = window.location.hash;
       if (anchor) {
-        var title = $('div' + anchor).children('h2').text();
-        var text = $('div' + anchor).children('div.content').find('p').first().text();
+        var header = $(anchor);
+        var title = header.text();
+        var text = header.parent().find('p').first().text();
       } else {
         var title = "Katholieke Gebeden";
         var text = "Traditionele gebeden en gregoriaanse liederen, ook speciaal voor of na de mis.";
       }
       Cocoon.Share.share({
-          message: title + " - " + text + " [http://gebeden.gelovenleren.net/" + anchor + "]",
+          subject: title,
+          message: text,
+          url: "http://gebeden.gelovenleren.net/" + anchor,
           image: "http://gebeden.gelovenleren.net/images/03.jpg"
       }, function(activity, completed, error){
           console.log("Share " + completed ? 'Ok' : 'Failed');
