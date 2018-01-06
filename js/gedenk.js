@@ -85,7 +85,7 @@ $(function() {
     if (isphone) {
         // something to do only on app
         $('.slide-arrow').width(0);
-        $('#play').hide;
+        $('#play').hide();
 //        document.addEventListener("deviceready", function(){
 //      		navigator.splashscreen.hide();
 //        }, false);
@@ -252,6 +252,14 @@ Webflow.push(function () {
       }, function(activity, completed, error){
           console.log("Share " + completed ? 'Ok' : 'Failed');
       });
+    });
+    $('#mail').on('click', function() {
+      cordova.plugins.email.open({
+          to: 'info@gelovenleren.net'
+      });
+    });
+    $('#blog').on('click', function() {
+      cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
     });
   } else {
     $('#share').hide();
