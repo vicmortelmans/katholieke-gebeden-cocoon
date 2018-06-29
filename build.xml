@@ -1,0 +1,40 @@
+<project name="gebeden" default="html" basedir=".">
+  <description>
+    take a set of markdown files and a toc xml and build a singel html
+  </description>
+  <!-- set global properties for this build -->
+  <property name="articles" location="articles"/>
+  <property name="toc" location="toc.xml"/>
+  <property name="html" location="html"/>
+  <property name="build" location="build"/>
+
+  <target name="markdown2html"
+        description="convert markdown files to html">
+    <apply executable="pandoc" dest="${html}" parallel="false">
+      <arg value="-f"/>
+      <arg value="markdown"/>
+      <arg value="-t"/>
+      <arg value="html"/>
+      <arg value="-o"/>
+      <targetfile/>
+      <srcfile/>
+      <fileset dir="${articles}" includes="*.markdown"/>
+      <mapper type="glob" from="*.markdown" to="*.html"/>
+    </apply>
+  </target>
+
+  <target name="html"
+        description="compile html files into a single html according to ${toc}">
+  </target>
+    
+  <target name="clean"
+        description="clean up">
+    <!-- Delete the ${build} and ${html} directory trees -->
+    <delete includeEmptyDirs="true">
+      <fileset dir="${build}" includes="**/*" defaultexcludes="no"/>
+    </delete>
+    <delete includeEmptyDirs="true">
+      <fileset dir="${html}" includes="**/*" defaultexcludes="no"/>
+    </delete>
+  </target>
+</project>

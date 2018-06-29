@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gedenk title="Gebeden">
+   <s1 id="gregoriaanse-liederen" title="Gregoriaanse Liederen">
+      <s2 id="alma-redemptoris-mater" title="Alma Redemptoris Mater">
+         <c id="alma-redemptoris-mater-1"/>
+         <c id="alma-redemptoris-mater-2"/>
+         <c id="alma-redemptoris-mater-3"/>
+      </s2>
+      <s2 id="sub-tuum-præsidium" title="Sub Tuum Præsidium">
+         <c id="sub-tuum-præsidium-1"/>
+         <c id="sub-tuum-præsidium-2"/>
+         <c id="sub-tuum-præsidium-3"/>
+      </s2>
+      <s2 id="ave-regina-cælorum" title="Ave Regina Cælorum">
+         <c id="ave-regina-cælorum-1"/>
+         <c id="ave-regina-cælorum-2"/>
+         <c id="ave-regina-cælorum-3"/>
+      </s2>
+      <s2 id="regina-cæli" title="Regina Cæli">
+         <c id="regina-cæli-1"/>
+         <c id="regina-cæli-2"/>
+         <c id="regina-cæli-3"/>
+      </s2>
+      <s2 id="salve-regina" title="Salve Regina">
+         <c id="salve-regina-1"/>
+         <c id="salve-regina-2"/>
+         <c id="salve-regina-3"/>
+      </s2>
+      <s2 id="pange-lingua" title="Pange Lingua (Tantum Ergo)">
+         <c id="pange-lingua-1"/>
+         <c id="pange-lingua-2"/>
+      </s2>
+      <s2 id="adoro-te-devote" title="Adoro te devote">
+         <c id="adoro-te-devote-1"/>
+         <c id="adoro-te-devote-2"/>
+      </s2>
+      <s2 id="veni-creator-spiritus" title="Veni Creator Spiritus">
+         <c id="veni-creator-spiritus-1"/>
+         <c id="veni-creator-spiritus-2"/>
+      </s2>
+      <s2 id="te-ioseph-celebrent" title="Te Ioseph celebrent">
+         <c id="te-ioseph-celebrent-1"/>
+         <c id="te-ioseph-celebrent-2"/>
+      </s2>
+      <s2 id="ave-maria" title="Ave Maria">
+         <c id="ave-maria-1"/>
+         <c id="ave-maria-2"/>
+         <c id="ave-maria-3"/>
+      </s2>
+      <s2 id="pater-noster" title="Pater Noster">
+         <c id="pater-noster-1"/>
+         <c id="pater-noster-2"/>
+      </s2>
+   </s1>
+   <s1 id="liturgische-gebeden" title="Liturgische gebeden">
+      <s2 id="asperges-me" title="Asperges me">
+         <c id="asperges-me-1"/>
+         <c id="asperges-me-2"/>
+      </s2>
+      <s2 id="vidi-aquam" title="Vidi aquam">
+         <c id="vidi-aquam-1"/>
+         <c id="vidi-aquam-2"/>
+      </s2>
+      <s2 id="ostende-nobis" title="Ostende nobis">
+         <c id="ostende-nobis-1"/>
+         <c id="ostende-nobis-2"/>
+      </s2>
+      <s2 id="kruisteken" title="Kruisteken">
+         <c id="kruisteken-1"/>
+         <c id="kruisteken-2"/>
+      </s2>
+      <s2 id="introibo" title="Introibo">
+         <c id="introibo-1"/>
+         <c id="introibo-2"/>
+      </s2>
+      <s2 id="confiteor" title="Confiteor">
+         <c id="confiteor-1"/>
+         <c id="confiteor-2"/>
+      </s2>
+      <s2 id="misericordiam" title="Misericordiam">
+         <c id="misericordiam-1"/>
+         <c id="misericordiam-2"/>
+      </s2>
+      <s2 id="kyrie" title="Kyrie">
+         <c id="kyrie-1"/>
+         <c id="kyrie-2"/>
+      </s2>
+      <s2 id="gloria" title="Gloria">
+         <c id="gloria-1"/>
+         <c id="gloria-2"/>
+      </s2>
+      <s2 id="schriftlezingen" title="Schriftlezingen">
+         <c id="schriftlezingen-1"/>
+      </s2>
+      <s2 id="twaalfartikelenvanhetgeloof" title="Credo van de apostelen">
+         <c id="twaalfartikelenvanhetgeloof-1"/>
+         <c id="twaalfartikelenvanhetgeloof-2"/>
+      </s2>
+      <s2 id="credo" title="Credo">
+         <c id="credo-1"/>
+         <c id="credo-2"/>
+      </s2>
+      <s2 id="offertorium" title="Offertorium">
+         <c id="offertorium-1"/>
+         <c id="offertorium-2"/>
+      </s2>
+      <s2 id="sursum-corda" title="Sursum corda">
+         <c id="sursum-corda-1"/>
+         <c id="sursum-corda-2"/>
+      </s2>
+      <s2 id="sanctus" title="Sanctus">
+         <c id="sanctus-1"/>
+         <c id="sanctus-2"/>
+      </s2>
+      <s2 id="mysterium-fidei" title="Mysterium fidei">
+         <c id="mysterium-fidei-1"/>
+         <c id="mysterium-fidei-2"/>
+      </s2>
+      <s2 id="per-ipsum" title="Per Ipsum">
+         <c id="per-ipsum-1"/>
+         <c id="per-ipsum-2"/>
+      </s2>
+      <s2 id="onzevader" title="Onze Vader">
+         <c id="onzevader-1"/>
+         <c id="onzevader-2"/>
+         <c id="onzevader-3"/>
+         <c id="onzevader-4"/>
+         <c id="onzevader-5"/>
+      </s2>
+      <s2 id="agnus-dei" title="Agnus Dei">
+         <c id="agnus-dei-1"/>
+         <c id="agnus-dei-2"/>
+      </s2>
+      <s2 id="ite-missa-est" title="Ite missa est">
+         <c id="ite-missa-est-1"/>
+         <c id="ite-missa-est-2"/>
+      </s2>
+      <s2 id="ultimam-evangelium" title="Ultimam Evangelium">
+         <c id="ultimam-evangelium-1"/>
+         <c id="ultimam-evangelium-2"/>
+      </s2>
+   </s1>
+   <s1 id="drie-eenheid" title="Drie-eenheid">
+      <s2 id="quicumque" title="Sýmbolum Athanasiánum">
+         <c id="quicumque-1"/>
+         <c id="quicumque-2"/>
+      </s2>
+      <s2 id="tedeum" title="Te Deum">
+         <c id="tedeum-1"/>
+         <c id="tedeum-2"/>
+      </s2>
+      <s2 id="trisagion" title="Triságium angélicum">
+         <c id="trisagion-1"/>
+         <c id="trisagion-2"/>
+      </s2>
+      <s2 id="berouw" title="Akte van berouw">
+         <c id="berouw-1"/>
+         <c id="berouw-2"/>
+      </s2>
+      <s2 id="liefde" title="Akte van liefde">
+         <c id="liefde-1"/>
+         <c id="liefde-2"/>
+      </s2>
+      <s2 id="hoop" title="Akte van hoop">
+         <c id="hoop-1"/>
+         <c id="hoop-2"/>
+      </s2>
+      <s2 id="geloof" title="Akte van geloof">
+         <c id="geloof-1"/>
+         <c id="geloof-2"/>
+      </s2>
+   </s1>
+   <s1 id="aanbidding" title="Aanbidding">
+      <s2 id="geestelijkecommunie" title="Gebed voor de geestelijke communie">
+         <c id="geestelijkecommunie-1"/>
+      </s2>
+      <s2 id="adorotedevote" title="Adoro te devote">
+         <c id="adorotedevote-1"/>
+         <c id="adorotedevote-2"/>
+      </s2>
+      <s2 id="pangelingua" title="Pange, língua">
+         <c id="pangelingua-1"/>
+         <c id="pangelingua-2"/>
+      </s2>
+      <s2 id="psalm150" title="Psalm 150">
+         <c id="psalm150-1"/>
+         <c id="psalm150-2"/>
+      </s2>
+   </s1>
+   <s1 id="heilige-geest" title="Heilige Geest">
+      <s2 id="venisanctespiritus" title="Veni Sancte Spiritus">
+         <c id="venisanctespiritus-1"/>
+         <c id="venisanctespiritus-2"/>
+      </s2>
+      <s2 id="venicreator" title="Veni, Creátor">
+         <c id="venicreator-1"/>
+         <c id="venicreator-2"/>
+      </s2>
+   </s1>
+   <s1 id="maria" title="Maagd Maria">
+      <s2 id="engel" title="De Engel des Heren">
+         <c id="engel-1"/>
+         <c id="engel-2"/>
+      </s2>
+      <s2 id="gedenk" title="Gedenkgebed of Memorare">
+         <c id="gedenk-1"/>
+         <c id="gedenk-2"/>
+      </s2>
+      <s2 id="eeraandevader" title="Eer aan de Vader">
+         <c id="eeraandevader-1"/>
+         <c id="eeraandevader-2"/>
+      </s2>
+      <s2 id="weesgegroet" title="Wees gegroet">
+         <c id="weesgegroet-1"/>
+         <c id="weesgegroet-2"/>
+         <c id="weesgegroet-3"/>
+      </s2>
+      <s2 id="rozenhoedje" title="Rozenhoedje">
+         <c id="rozenhoedje-1"/>
+      </s2>
+      <s2 id="stabatmater" title="Stabat mater">
+         <c id="stabatmater-1"/>
+         <c id="stabatmater-2"/>
+      </s2>
+      <s2 id="litanievanloreto" title="Litanie van Loreto">
+         <c id="litanievanloreto-1"/>
+         <c id="litanievanloreto-2"/>
+      </s2>
+   </s1>
+   <s1 id="voor-de-mis" title="Voor de Mis">
+      <s2 id="gebedjozef" title="Gebed tot Sint Jozef">
+         <c id="gebedjozef-1"/>
+         <c id="gebedjozef-2"/>
+      </s2>
+      <s2 id="gebedambrosius" title="Gebed van Sint Ambrosius">
+         <c id="gebedambrosius-1"/>
+         <c id="gebedambrosius-2"/>
+      </s2>
+      <s2 id="gebedaquinovoordemis" title="Gebed van Thomas van Aquino">
+         <c id="gebedaquinovoordemis-1"/>
+         <c id="gebedaquinovoordemis-2"/>
+      </s2>
+   </s1>
+   <s1 id="na-de-mis" title="Na de Mis">
+      <s2 id="lofzangvandaniel" title="Lofzang van Daniël">
+         <c id="lofzangvandaniel-1"/>
+         <c id="lofzangvandaniel-2"/>
+      </s2>
+      <s2 id="gebedtotdeaartsengelmichael"
+          title="Gebed tot de aartsengel Michaël">
+         <c id="gebedtotdeaartsengelmichael-1"/>
+         <c id="gebedtotdeaartsengelmichael-2"/>
+      </s2>
+      <s2 id="gebedaquinonademis" title="Gebed van Thomas van Aquino">
+         <c id="gebedaquinonademis-1"/>
+         <c id="gebedaquinonademis-2"/>
+      </s2>
+      <s2 id="psalm2" title="Psalm 2">
+         <c id="psalm2-1"/>
+         <c id="psalm2-2"/>
+      </s2>
+      <s2 id="universalis" title="Orátio universális (Clemens XI)">
+         <c id="universalis-1"/>
+         <c id="universalis-2"/>
+      </s2>
+      <s2 id="absoute" title="Absoute">
+         <c id="absoute-1"/>
+         <c id="absoute-2"/>
+      </s2>
+   </s1>
+</gedenk>
