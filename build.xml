@@ -1,12 +1,13 @@
 <project name="gebeden" default="html" basedir=".">
   <description>
-    take a set of markdown files and a toc xml and build a singel html
+    take a set of markdown files and a toc xml and build a single html
   </description>
   <!-- set global properties for this build -->
   <property name="articles" location="articles"/>
   <property name="toc" location="toc.xml"/>
   <property name="html" location="html"/>
-  <property name="build" location="build"/>
+  <property name="index" location="index.html"/>
+  <property name="eager" location="eager-index.html"/>
 
   <target name="markdown2html"
         description="convert markdown files to html">
@@ -23,16 +24,33 @@
     </apply>
   </target>
 
+  <target name="uptodate"
+        description="checks if the index.html is up to date">
+    <uptodate property="uptodate" targetfile="${index}">
+      <srcfiles dir="${html}" includes="**/*.*"/>
+    </uptodate>
+    <touch file="${toc}"/><!-- workaround to force the build -->
+  </target>
+
+  <target name="test-uptodate" depends="uptodate">
+    <echo message="update: ${uptodate}"/>
+  </target>
+
   <target name="html"
-        description="compile html files into a single html according to ${toc}">
+        description="compile html files into a single html according to ${toc}"
+        depends="markdown2html, uptodate">
+    <xslt in="${toc}" out="${eager}"
+      style="html.xslt">
+    </xslt>
+    <xslt in="${eager}" out="${index}"
+      style="lazy.xslt">
+    </xslt>
+    <delete file="${eager}"/>
   </target>
     
   <target name="clean"
         description="clean up">
-    <!-- Delete the ${build} and ${html} directory trees -->
-    <delete includeEmptyDirs="true">
-      <fileset dir="${build}" includes="**/*" defaultexcludes="no"/>
-    </delete>
+    <!-- Delete the ${html} directory tree -->
     <delete includeEmptyDirs="true">
       <fileset dir="${html}" includes="**/*" defaultexcludes="no"/>
     </delete>

@@ -118,6 +118,15 @@ function headerOnClick(header) {
   openH1.removeClass('selected');
 }
 function h1OnClick(h1) {
+  // lazy load all images beneath this header
+  var lazy = $(h1).parent().find('img');
+  console.log('Found ' + lazy.length + ' lazy images');
+  lazy.each(function() {
+    if ($(this).attr('data-src')) {
+      $(this).attr('src', $(this).attr('data-src'));
+      $(this).removeAttr('data-src');
+    }
+  });
   // show all child h2's and hide all contents
   // if this h1 is open, hide all contents
   // else (this h1 is closed), close the open h1 and show all h2's
