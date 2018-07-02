@@ -1,2 +1,3 @@
 #!/bin/sh
-find -path "./html/*.html" -o -path "./toc.xml" | entr ant
+python -m SimpleHTTPServer &
+while sleep 1 ; do ls articles/*.markdown toc.xml css/*.css | entr -d ant ; done
