@@ -4,7 +4,7 @@ var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('ht
 
 // jQuery ready handler takes care of layout and fetching daily readings
 $(function() {
-    console.log("DEBUG in jQuery ready handler now")
+    console.log("DEBUG calculating screen layout")
     // define available background images
     var bgImages = [
         { file: 'images/01.jpg', w: 1536, h: 1024 },
@@ -52,6 +52,7 @@ $(function() {
         bgY = - 1/2 * (bgScale * bgImage.h - bodyH);
         var bgSize = bgW + 'px auto';
     }
+    console.log("DEBUG layouting the screen")
     // set the rows with the row height and fontsize
     $('header,.ruimte,h1.init').css('height', rowH + 'px');
     $('header,.ruimte,h1').css('line-height', rowH + 'px').css('font-size', fontS + 'pt');
@@ -65,6 +66,7 @@ $(function() {
       var actualIndex = rowCount - index - 1;
       $(this).css('background-position-y', (bgY - actualIndex * rowH) + 'px');
     });
+    console.log("DEBUG done layouting the screen")
     if (isphone) {
         // something to do only on app
         $('.slide-arrow').width(0);
@@ -73,12 +75,14 @@ $(function() {
 //      		navigator.splashscreen.hide();
 //        }, false);
     }
+    console.log("DEBUG downloading the readings for today")
     // download and display the readings for today
     var readingsUrl = "https://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
     var readingsFetcher = $.getJSON(readingsUrl);
     readingsFetcher.done(function(d){
         var status = d;
         $('#schriftlezingen').parent().find('.slide-containeer p').html(status['text']);
+    console.log("DEBUG done downloading the readings for today")
     });
 }); // end of jQuery ready handler
 
