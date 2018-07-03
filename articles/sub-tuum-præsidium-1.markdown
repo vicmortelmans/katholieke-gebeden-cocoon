@@ -1,1 +1,1 @@
-![Sub Tuum Præsidium](images/sub-tuum-praesidium.svg.png)
+![](images/sub-tuum-praesidium.svg.png)

@@ -1,1 +1,1 @@
-![Adoro te devote](images/adoro-te-devote.svg.png)
+![](images/adoro-te-devote.svg.png)

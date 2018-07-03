@@ -1,1 +1,1 @@
-![Salve Regina](images/salve-regina.svg.png)
+![](images/salve-regina.svg.png)

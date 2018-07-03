@@ -115,6 +115,7 @@ h3 {
 } 
 img {
   padding: 0px 0px 10px 0px;
+  width: 100%;
 }
 .content {
   /* default = hiding */

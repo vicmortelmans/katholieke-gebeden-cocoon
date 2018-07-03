@@ -1,1 +1,1 @@
-![Pater Noster](images/Pater-Noster.jpg)
+![](images/Pater-Noster.jpg)

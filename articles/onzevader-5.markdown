@@ -1,3 +1,1 @@
-*m. Peter van de Velde*
-
-![Pater Noster](images/onze-vaderpvdv-full-score.png)
+![m. Peter van de Velde](images/onze-vaderpvdv-full-score.png)

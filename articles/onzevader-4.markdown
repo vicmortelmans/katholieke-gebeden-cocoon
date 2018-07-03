@@ -1,3 +1,1 @@
-*m. naar Mozarabische psalmtoon IV*
-
-![Pater Noster](images/0nze-vader-mozarabische-psalmtoon-iv.png)
+![m. naar Mozarabische psalmtoon IV](images/0nze-vader-mozarabische-psalmtoon-iv.png)

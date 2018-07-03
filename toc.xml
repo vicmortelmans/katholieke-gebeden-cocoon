@@ -69,7 +69,7 @@
          <c id="mass-iv-kyrie"/>
          <c id="mass-iv-gloria"/>
       </s2>
-      <!--s2 id="mass-v" title="Mass V Kyrie magnæ Deus potentiæ">
+      <s2 id="mass-v" title="Mass V Kyrie magnæ Deus potentiæ">
          <c id="mass-v-kyrie"/>
          <c id="mass-v-gloria"/>
       </s2>
@@ -104,7 +104,6 @@
       <s2 id="mass-xiii" title="Mass XIII Stelliferi Conditor orbis">
          <c id="mass-xiii-kyrie"/>
          <c id="mass-xiii-gloria"/>
-         <c id="mass-xiii-agnus"/>
       </s2>
       <s2 id="mass-xiv" title="Mass XIV Jesu redemptor">
          <c id="mass-xiv-kyrie"/>
@@ -116,16 +115,13 @@
       </s2>
       <s2 id="mass-xvi" title="Mass XVI (weekdagen in de tijd doorheen het jaar)">
          <c id="mass-xvi-kyrie"/>
-         <c id="mass-xvi-gloria"/>
       </s2>
       <s2 id="mass-xvii" title="Mass XVII (zondagen in Advent en Vasten)">
          <c id="mass-xvii-kyrie"/>
-         <c id="mass-xvii-gloria"/>
       </s2>
       <s2 id="mass-xviii" title="Mass XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)">
          <c id="mass-xviii-kyrie"/>
-         <c id="mass-xviii-gloria"/>
-      </s2-->
+      </s2>
    </s1>
    <s1 id="liturgische-gebeden" title="Liturgische gebeden">
       <s2 id="asperges-me" title="Asperges me">
@@ -302,7 +298,7 @@
          <c id="litanievanloreto-2"/>
       </s2>
    </s1>
-   <s1 id="voor-de-mis" title="Voor de Mis">
+   <s1 id="voor-en-na-de-mis" title="Voor en na de Mis">
       <s2 id="gebedjozef" title="Gebed tot Sint Jozef">
          <c id="gebedjozef-1"/>
          <c id="gebedjozef-2"/>
@@ -315,8 +311,6 @@
          <c id="gebedaquinovoordemis-1"/>
          <c id="gebedaquinovoordemis-2"/>
       </s2>
-   </s1>
-   <s1 id="na-de-mis" title="Na de Mis">
       <s2 id="lofzangvandaniel" title="Lofzang van Daniël">
          <c id="lofzangvandaniel-1"/>
          <c id="lofzangvandaniel-2"/>

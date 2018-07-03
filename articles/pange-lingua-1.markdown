@@ -1,1 +1,1 @@
-![Pange Lingua](images/pange-lingua.svg.png)
+![](images/pange-lingua.svg.png)

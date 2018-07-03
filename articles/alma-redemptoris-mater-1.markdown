@@ -1,1 +1,1 @@
-![Alma Redemptoris Mater](images/alma-redemptoris-mater.svg.png)
+![](images/alma-redemptoris-mater.svg.png)

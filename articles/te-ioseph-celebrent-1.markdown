@@ -1,1 +1,1 @@
-![Te Ioseph celebrent](images/hy--te_joseph_celebrent--solesmes.png)
+![](images/hy--te_joseph_celebrent--solesmes.png)
