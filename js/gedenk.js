@@ -2,23 +2,6 @@ var rowH;
 var bgImage;
 var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
 
-if (isphone) {
-  // do the cordova stuff
-  var jsElm = document.createElement("script");
-  jsElm.type = "application/javascript";
-  jsElm.src = "cordova.js";
-  document.body.appendChild(jsElm);
-  document.addEventListener("deviceready", function(){
-      console.log("DEBUG in deviceready handler now");
-  });
-} else {
-  // show the addthis share button
-  var jsElm = document.createElement("script");
-  jsElm.type = "application/javascript";
-  jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
-  document.body.appendChild(jsElm);
-}
-
 // jQuery ready handler takes care of layout and fetching daily readings
 $(function() {
     console.log("DEBUG in jQuery ready handler now")
@@ -274,3 +257,21 @@ Webflow.push(function () {
     $('#share').hide();
   }
 });
+
+if (isphone) {
+  // do the cordova stuff
+  var jsElm = document.createElement("script");
+  jsElm.type = "application/javascript";
+  jsElm.src = "cordova.js";
+  document.body.appendChild(jsElm);
+  document.addEventListener("deviceready", function(){
+      console.log("DEBUG in deviceready handler now");
+  });
+} else {
+  // show the addthis share button
+  var jsElm = document.createElement("script");
+  jsElm.type = "application/javascript";
+  jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
+  document.body.appendChild(jsElm);
+}
+
