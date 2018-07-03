@@ -15,7 +15,7 @@ if (isphone) {
   // show the addthis share button
   var jsElm = document.createElement("script");
   jsElm.type = "application/javascript";
-  jsElm.src = "http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
+  jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
   document.body.appendChild(jsElm);
 }
 
@@ -91,7 +91,7 @@ $(function() {
 //        }, false);
     }
     // download and display the readings for today
-    var readingsUrl = "http://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
+    var readingsUrl = "https://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
     var readingsFetcher = $.getJSON(readingsUrl);
     readingsFetcher.done(function(d){
         var status = d;

@@ -8,7 +8,7 @@
         <meta charset="utf-8"></meta>
         <title><xsl:value-of select="@title"/></title>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <meta property="og:image" content="http://gebeden.gelovenleren.net/images/03.jpg"></meta>
+        <meta property="og:image" content="https://gebeden.gelovenleren.net/images/03.jpg"></meta>
         <meta property="fb:app_id" content="773525272833857"></meta>
         <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"></meta>
         <link rel="stylesheet" type="text/css" href="css/normalize.css"></link>
@@ -20,7 +20,17 @@
             if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
         </script>
         <link rel="shortcut icon" type="image/x-icon" href="icon.png"></link>
-        <link rel="icon" type="image/png" href="icon.png"></link>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://gebeden.gelovenleren.net/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://gebeden.gelovenleren.net/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://gebeden.gelovenleren.net/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://gebeden.gelovenleren.net/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://gebeden.gelovenleren.net/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://gebeden.gelovenleren.net/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="https://gebeden.gelovenleren.net/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://gebeden.gelovenleren.net/favicon-16x16.png" sizes="16x16" />
+        <meta name="application-name" content="Gebeden"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="https://gebeden.gelovenleren.net/mstile-144x144.png" />
       </head>
       <body>
         
