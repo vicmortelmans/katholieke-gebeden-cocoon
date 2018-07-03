@@ -245,6 +245,7 @@ Webflow.push(function () {
           console.log("Share " + completed ? 'Ok' : 'Failed');
       });
     });
+    $('#share').show();
     $('#mail').on('click', function() {
       cordova.plugins.email.open({
           to: 'info@gelovenleren.net'
