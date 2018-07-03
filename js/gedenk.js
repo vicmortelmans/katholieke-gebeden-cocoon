@@ -78,12 +78,11 @@ $(function() {
     console.log("DEBUG downloading the readings for today")
     // download and display the readings for today
     var readingsUrl = "https://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
-    var readingsFetcher = $.getJSON(readingsUrl);
-    readingsFetcher.done(function(d){
-        var status = d;
-        $('#schriftlezingen').parent().find('.slide-containeer p').html(status['text']);
-    console.log("DEBUG done downloading the readings for today")
+    $.getJSON(readingsUrl, function(d){
+      var status = d;
+      $('#schriftlezingen').parent().find('.slide-containeer p').html(status['text']);
     });
+    console.log("DEBUG done downloading the readings for today")
 }); // end of jQuery ready handler
 
 function headerOnClick(header) {
