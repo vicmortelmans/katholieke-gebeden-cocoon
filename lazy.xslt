@@ -10,7 +10,7 @@
   </xsl:template>
 
   <xsl:template match="img">
-    <img src="http://spacergif.org/spacer.gif" 
+    <img src="https://spacergif.org/spacer.gif" 
          class="lazy" 
          data-src="{@src}" 
          alt="{@alt}"/>
