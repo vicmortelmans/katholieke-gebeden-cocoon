@@ -52,7 +52,7 @@
          <c id="pater-noster-2"/>
       </s2>
    </s1>
-   <!--s1 id="kyriale" title="Kyriale">
+   <s1 id="kyriale" title="Kyriale">
       <s2 id="mass-i" title="Mass I Lux et origo (Paastijd)">
          <c id="mass-i-kyrie"/> 
          <c id="mass-i-gloria"/>
@@ -122,7 +122,7 @@
       <s2 id="mass-xviii" title="Mass XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)">
          <c id="mass-xviii-kyrie"/>
       </s2>
-   </s1-->
+   </s1>
    <s1 id="liturgische-gebeden" title="Liturgische gebeden">
       <s2 id="asperges-me" title="Asperges me">
          <c id="asperges-me-1"/>
