@@ -34,7 +34,7 @@ $(function() {
     rowH = bodyH / rowCount;
     if (rowH < 48) {
         rowH = 48;
-        bodyH = (rowCount - 1) * rowH;
+        bodyH = rowCount * rowH;
     }
     // calculate the fontsize
     var fontS = 14 / 48 * rowH;
