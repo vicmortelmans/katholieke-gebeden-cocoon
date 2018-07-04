@@ -53,9 +53,19 @@ $(function() {
         var bgSize = bgW + 'px auto';
     }
     console.log("DEBUG layouting the screen")
-    // set the rows with the row height and fontsize
+    // set the h1 rows with the row height and fontsize
     $('header,.ruimte,h1.init').css('height', rowH + 'px');
     $('header,.ruimte,h1').css('line-height', rowH + 'px').css('font-size', fontS + 'pt');
+    // check the h2 rows for long texts and wrap if needed
+    $('h2').each(function() {
+      var textWidth = 16 + 7.68 * $.trim($(this).text()).length;  
+      // 7.68 is approximate ratio with Roboto Medium 16 px
+      // 16 is padding
+      if (textWidth > bodyW) {
+        $(this).css('line-height', '23px');
+        // default in css is 48px
+      }
+    });
     // set the background image  
     $('header,.ruimte,.item:has(h1)')
         .css('background-image', 'url(' + bgImage.file + ')')
