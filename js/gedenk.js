@@ -248,8 +248,8 @@ Webflow.push(function () {
       Cocoon.Share.share({
           subject: title,
           message: text,
-          url: "http://gebeden.gelovenleren.net/" + anchor,
-          image: "http://gebeden.gelovenleren.net/" + bgImage.file
+          url: "https://gebeden.gelovenleren.net/" + anchor,
+          image: "https://gebeden.gelovenleren.net/" + bgImage.file
       }, function(activity, completed, error){
           console.log("Share " + completed ? 'Ok' : 'Failed');
       });
