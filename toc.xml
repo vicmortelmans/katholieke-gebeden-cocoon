@@ -53,73 +53,73 @@
       </s2>
    </s1>
    <s1 id="kyriale" title="Kyriale">
-      <s2 id="mass-i" title="Mass I Lux et origo (Paastijd)">
+      <s2 id="mass-i" title="Mis I Lux et origo (Paastijd)">
          <c id="mass-i-kyrie"/> 
          <c id="mass-i-gloria"/>
       </s2>
-      <s2 id="mass-ii" title="Mass II Kyrie fons bonitatis">
+      <s2 id="mass-ii" title="Mis II Kyrie fons bonitatis">
          <c id="mass-ii-kyrie"/>
          <c id="mass-ii-gloria"/>
       </s2>
-      <s2 id="mass-iii" title="Mass III Kyrie Deus sempiterne (hoogfeesten)">
+      <s2 id="mass-iii" title="Mis III Kyrie Deus sempiterne (hoogfeesten)">
          <c id="mass-iii-kyrie"/>
          <c id="mass-iii-gloria"/>
       </s2>
-      <s2 id="mass-iv" title="Mass IV Cunctipotens Genitor Deus (Apostelfeesten)">
+      <s2 id="mass-iv" title="Mis IV Cunctipotens Genitor Deus (Apostelfeesten)">
          <c id="mass-iv-kyrie"/>
          <c id="mass-iv-gloria"/>
       </s2>
-      <s2 id="mass-v" title="Mass V Kyrie magnæ Deus potentiæ">
+      <s2 id="mass-v" title="Mis V Kyrie magnæ Deus potentiæ">
          <c id="mass-v-kyrie"/>
          <c id="mass-v-gloria"/>
       </s2>
-      <s2 id="mass-vi" title="Mass VI Kyrie Rex Genitor">
+      <s2 id="mass-vi" title="Mis VI Kyrie Rex Genitor">
          <c id="mass-vi-kyrie"/>
          <c id="mass-vi-gloria"/>
       </s2>
-      <s2 id="mass-vii" title="Mass VII Kyrie Rex splendens">
+      <s2 id="mass-vii" title="Mis VII Kyrie Rex splendens">
          <c id="mass-vii-kyrie"/>
          <c id="mass-vii-gloria"/>
       </s2>
-      <s2 id="mass-viii" title="Mass VIII De Angelis">
+      <s2 id="mass-viii" title="Mis VIII De Angelis">
          <c id="mass-viii-kyrie"/>
          <c id="mass-viii-gloria"/>
       </s2>
-      <s2 id="mass-ix" title="Mass IX Cum jubilo (hoogdagen en mariafeesten)">
+      <s2 id="mass-ix" title="Mis IX Cum jubilo (hoogdagen en mariafeesten)">
          <c id="mass-ix-kyrie"/>
          <c id="mass-ix-gloria"/>
       </s2>
-      <s2 id="mass-x" title="Mass X Alme Pater (mariafeesten)">
+      <s2 id="mass-x" title="Mis X Alme Pater (mariafeesten)">
          <c id="mass-x-kyrie"/>
          <c id="mass-x-gloria"/>
       </s2>
-      <s2 id="mass-xi" title="Mass XI Orbis factor (zondagen doorheen het jaar)">
+      <s2 id="mass-xi" title="Mis XI Orbis factor (zondagen doorheen het jaar)">
          <c id="mass-xi-kyrie"/>
          <c id="mass-xi-gloria"/>
       </s2>
-      <s2 id="mass-xii" title="Mass XII Pater cuncta">
+      <s2 id="mass-xii" title="Mis XII Pater cuncta">
          <c id="mass-xii-kyrie"/>
          <c id="mass-xii-gloria"/>
       </s2>
-      <s2 id="mass-xiii" title="Mass XIII Stelliferi Conditor orbis">
+      <s2 id="mass-xiii" title="Mis XIII Stelliferi Conditor orbis">
          <c id="mass-xiii-kyrie"/>
          <c id="mass-xiii-gloria"/>
       </s2>
-      <s2 id="mass-xiv" title="Mass XIV Jesu redemptor">
+      <s2 id="mass-xiv" title="Mis XIV Jesu redemptor">
          <c id="mass-xiv-kyrie"/>
          <c id="mass-xiv-gloria"/>
       </s2>
-      <s2 id="mass-xv" title="Mass XV Dominator Deus">
+      <s2 id="mass-xv" title="Mis XV Dominator Deus">
          <c id="mass-xv-kyrie"/>
          <c id="mass-xv-gloria"/>
       </s2>
-      <s2 id="mass-xvi" title="Mass XVI (weekdagen in de tijd doorheen het jaar)">
+      <s2 id="mass-xvi" title="Mis XVI (weekdagen in de tijd doorheen het jaar)">
          <c id="mass-xvi-kyrie"/>
       </s2>
-      <s2 id="mass-xvii" title="Mass XVII (zondagen in Advent en Vasten)">
+      <s2 id="mass-xvii" title="Mis XVII (zondagen in Advent en Vasten)">
          <c id="mass-xvii-kyrie"/>
       </s2>
-      <s2 id="mass-xviii" title="Mass XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)">
+      <s2 id="mass-xviii" title="Mis XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)">
          <c id="mass-xviii-kyrie"/>
       </s2>
    </s1>
