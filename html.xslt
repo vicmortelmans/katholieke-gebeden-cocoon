@@ -33,16 +33,16 @@
         <meta name="msapplication-TileImage" content="https://gebeden.gelovenleren.net/mstile-144x144.png" />
       </head>
       <body>
-        
-        <header>
+        <div class="splash"></div>
+        <header class="row">
           <div><xsl:value-of select="@title"/></div>
         </header>
 
-        <div class="w-container ruimte boven"></div>
+        <div class="w-container ruimte boven row"></div>
     
         <xsl:apply-templates/>
 
-        <div class="w-container ruimte beneden">
+        <div class="w-container ruimte beneden row">
           <div class="action-button" id="share"></div>
         </div>
 
@@ -63,7 +63,7 @@
   </xsl:template>
 
   <xsl:template match="s1">
-    <div class="w-container item">
+    <div class="w-container item row">
       <h1 class="init" id="{@id}"><span><xsl:value-of select="@title"/></span></h1>
       <div class="toc">
 

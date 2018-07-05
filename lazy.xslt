@@ -9,7 +9,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="img">
+  <xsl:template match="img[not(contains(@class, 'eager'))]">
     <img src="https://spacergif.org/spacer.gif" 
          class="lazy" 
          data-src="{@src}" 
