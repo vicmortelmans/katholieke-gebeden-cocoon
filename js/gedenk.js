@@ -233,6 +233,7 @@ Webflow.push(function () {
   });
   $('h2').on('click', function() {
     h2OnClick(this);
+    window.history.replaceState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
   });
   $('.content').on('click', function() {
       // workaround for webflow sliders not being aligned properly
