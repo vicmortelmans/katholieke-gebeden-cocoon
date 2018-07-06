@@ -240,7 +240,10 @@ Webflow.push(function () {
       if (anchor) {
         var header = $(anchor);
         var title = header.text();
-        var text = header.parent().find('p').first().text();
+        var text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
+        if (text.length == 0) {
+          text = title;
+        }
       } else {
         var title = "Katholieke Gebeden";
         var text = "Traditionele gebeden en gregoriaanse liederen, ook speciaal voor of na de mis.";
@@ -249,7 +252,7 @@ Webflow.push(function () {
           subject: title,
           message: text,
           url: "https://gebeden.gelovenleren.net/" + anchor,
-          image: "https://gebeden.gelovenleren.net/" + bgImage.file
+          image: "https://gebeden.gelovenleren.net/images/" + bgImage.file
       }, function(activity, completed, error){
           console.log("Share " + completed ? 'Ok' : 'Failed');
       });
