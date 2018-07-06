@@ -3,6 +3,24 @@ var bgImage;
 var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
 var expansion = 0;
 
+if (isphone) {
+  // do the cordova stuff
+  var jsElm = document.createElement("script");
+  jsElm.type = "application/javascript";
+  jsElm.src = "cordova.js";
+  document.body.appendChild(jsElm);
+  document.addEventListener("deviceready", function(){
+    console.log("DEBUG in deviceready handler now");
+  });
+} else {
+  // show the addthis share button
+  var jsElm = document.createElement("script");
+  jsElm.type = "application/javascript";
+  jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
+  document.body.appendChild(jsElm);
+  $('#share').hide();
+}
+
 // jQuery ready handler takes care of layout and fetching daily readings
 $(function() {
     // define available background images
@@ -214,14 +232,7 @@ Webflow.push(function () {
     }
   });
   $('h2').on('click', function() {
-    var oldExpansion = expansion;
     h2OnClick(this);
-    var newExpansion = expansion;
-    if (newExpansion > oldExpansion) {
-      window.history.pushState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
-    } else {
-      window.history.replaceState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
-    }
   });
   $('.content').on('click', function() {
       // workaround for webflow sliders not being aligned properly
@@ -250,53 +261,44 @@ Webflow.push(function () {
   };
   navigateToHash();
   $(window).on('hashchange', navigateToHash);
-});
-
-if (isphone) {
-  // do the cordova stuff
-  var jsElm = document.createElement("script");
-  jsElm.type = "application/javascript";
-  jsElm.src = "cordova.js";
-  document.body.appendChild(jsElm);
-  document.addEventListener("deviceready", function(){
-      console.log("DEBUG in deviceready handler now");
-      $('#share').on('click', function() {
-        var anchor = window.location.hash;
+  if (isphone) {
+    $('#share').on('click', function() {
+      var anchor = window.location.hash;
+      if (anchor) {
+        var header = $(anchor);
+        var title = header.text().replace(/^\s*|\s*$/g, "");
+        var text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
+        if (text.length == 0) {
+          text = title;
+        }
+      } else {
         var title = "Katholieke Gebeden";
         var text = "Traditionele gebeden en gregoriaanse liederen, ook speciaal voor of na de mis.";
-        if (anchor) {
-          var header = $(anchor);
-          title = header.text().replace(/^\s*|\s*$/g, "");
-          text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
-          if (text.length == 0) {
-            text = title;
-          }
-        }
-        Cocoon.Share.share({
-            subject: title,
-            message: text,
-            url: "https://gebeden.gelovenleren.net/" + anchor,
-            image: "https://gebeden.gelovenleren.net/images/" + bgImage.file
-        }, function(activity, completed, error){
-            console.log("Share " + completed ? 'Ok' : 'Failed');
-        });
-      });
-      $('#share').show();
-      $('#mail').on('click', function() {
-        cordova.plugins.email.open({
-            to: 'info@gelovenleren.net'
-        });
-      });
-      $('#blog').on('click', function() {
-        cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
+      }
+      var options = {
+        message: text,
+        subject: title,
+//        files: ["https://gebeden.gelovenleren.net/" + bgImage.file],
+        url: "https://gebeden.gelovenleren.net/" + anchor
+      };
+      var onSuccess = function(result) {
+        console.log("Share completed? " + result.completed);
+        console.log("Shared to app: " + result.app);
+      };
+      var onError = function(msg) {
+        console.log("Sharing failed with message: " + msg);
+      };
+      window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
     });
-  });
-} else {
-  // show the addthis share button
-  var jsElm = document.createElement("script");
-  jsElm.type = "application/javascript";
-  jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
-  document.body.appendChild(jsElm);
-  $('#share').hide();
-}
+    $('#share').show();
+    $('#mail').on('click', function() {
+      cordova.plugins.email.open({
+          to: 'info@gelovenleren.net'
+      });
+    });
+    $('#blog').on('click', function() {
+      cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
+    });
+  }
+});
 
