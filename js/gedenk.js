@@ -1,6 +1,7 @@
 var rowH;
 var bgImage;
 var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+var expansion = 0;
 
 // jQuery ready handler takes care of layout and fetching daily readings
 $(function() {
@@ -92,6 +93,7 @@ $(function() {
 }); // end of jQuery ready handler
 
 function headerOnClick(header) {
+  expansion = 0;
   // hide the h2's in the selected h1
   // hide the contents in that h1
   // align to top of the screen
@@ -110,6 +112,7 @@ function headerOnClick(header) {
   openH1.removeClass('selected');
 }
 function h1OnClick(h1) {
+  expansion = 1;
   // lazy load all images beneath this header
   var lazy = $(h1).parent().find('img');
   console.log('Found ' + lazy.length + ' lazy images');
@@ -154,6 +157,7 @@ function h1OnClick(h1) {
   TweenLite.to(h2sToShow,1,{height:48});
 }
 function h2OnClick(h2) {
+  expansion = 2;
   // show this content and hide all other
   // (assumption: the parent h1 is already selected)
   // only do the following if the clicked h2 was not the open one
@@ -197,15 +201,27 @@ Webflow.push(function () {
   var speedLast = 0.90;
   $('header').on('click', function() {
     headerOnClick(this);
-    window.history.pushState({}, "Katholieke Gebeden", "#");
+    window.history.replaceState({}, "Katholieke Gebeden", "#");
   });
   $('h1').on('click', function() {
+    var oldExpansion = expansion;
     h1OnClick(this);
-    window.history.pushState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    var newExpansion = expansion;
+    if (newExpansion > oldExpansion) {
+      window.history.pushState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    } else {
+      window.history.replaceState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    }
   });
   $('h2').on('click', function() {
+    var oldExpansion = expansion;
     h2OnClick(this);
-    window.history.pushState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    var newExpansion = expansion;
+    if (newExpansion > oldExpansion) {
+      window.history.pushState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    } else {
+      window.history.replaceState({}, "Katholieke Gebeden" + $(this).text(), "#" + $(this).attr('id'));
+    }
   });
   $('.content').on('click', function() {
       // workaround for webflow sliders not being aligned properly
@@ -234,41 +250,6 @@ Webflow.push(function () {
   };
   navigateToHash();
   $(window).on('hashchange', navigateToHash);
-  if (isphone) {
-    $('#share').on('click', function() {
-      var anchor = window.location.hash;
-      if (anchor) {
-        var header = $(anchor);
-        var title = header.text();
-        var text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
-        if (text.length == 0) {
-          text = title;
-        }
-      } else {
-        var title = "Katholieke Gebeden";
-        var text = "Traditionele gebeden en gregoriaanse liederen, ook speciaal voor of na de mis.";
-      }
-      Cocoon.Share.share({
-          subject: title,
-          message: text,
-          url: "https://gebeden.gelovenleren.net/" + anchor,
-          image: "https://gebeden.gelovenleren.net/images/" + bgImage.file
-      }, function(activity, completed, error){
-          console.log("Share " + completed ? 'Ok' : 'Failed');
-      });
-    });
-    $('#share').show();
-    $('#mail').on('click', function() {
-      cordova.plugins.email.open({
-          to: 'info@gelovenleren.net'
-      });
-    });
-    $('#blog').on('click', function() {
-      cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
-    });
-  } else {
-    $('#share').hide();
-  }
 });
 
 if (isphone) {
@@ -279,6 +260,36 @@ if (isphone) {
   document.body.appendChild(jsElm);
   document.addEventListener("deviceready", function(){
       console.log("DEBUG in deviceready handler now");
+      $('#share').on('click', function() {
+        var anchor = window.location.hash;
+        var title = "Katholieke Gebeden";
+        var text = "Traditionele gebeden en gregoriaanse liederen, ook speciaal voor of na de mis.";
+        if (anchor) {
+          var header = $(anchor);
+          title = header.text().replace(/^\s*|\s*$/g, "");
+          text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
+          if (text.length == 0) {
+            text = title;
+          }
+        }
+        Cocoon.Share.share({
+            subject: title,
+            message: text,
+            url: "https://gebeden.gelovenleren.net/" + anchor,
+            image: "https://gebeden.gelovenleren.net/images/" + bgImage.file
+        }, function(activity, completed, error){
+            console.log("Share " + completed ? 'Ok' : 'Failed');
+        });
+      });
+      $('#share').show();
+      $('#mail').on('click', function() {
+        cordova.plugins.email.open({
+            to: 'info@gelovenleren.net'
+        });
+      });
+      $('#blog').on('click', function() {
+        cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
+    });
   });
 } else {
   // show the addthis share button
@@ -286,5 +297,6 @@ if (isphone) {
   jsElm.type = "application/javascript";
   jsElm.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a32c53e235810bf";
   document.body.appendChild(jsElm);
+  $('#share').hide();
 }
 

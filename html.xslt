@@ -53,10 +53,10 @@
         </footer>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/webflow.js"></script>
-        <script type="text/javascript" src="js/gedenk.js"></script>
         <script type="text/javascript" src="js/TweenLite.min.js"></script>
         <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
         <script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="js/gedenk.js"></script>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
       </body>
     </html>
