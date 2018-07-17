@@ -10,7 +10,7 @@
   </xsl:template>
 
   <xsl:template match="img[not(contains(@class, 'eager'))]">
-    <img src="https://spacergif.org/spacer.gif" 
+    <img src="images/spacer.gif" 
          class="lazy" 
          data-src="{@src}" 
          alt="{@alt}"/>

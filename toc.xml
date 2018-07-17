@@ -152,13 +152,15 @@
          <c id="misericordiam-1"/>
          <c id="misericordiam-2"/>
       </s2>
-      <s2 id="kyrie" title="Kyrie">
+      <s2 id="lit-kyrie" title="Kyrie">
          <c id="kyrie-1"/>
          <c id="kyrie-2"/>
+         <c id="kyrie-3"/>
       </s2>
-      <s2 id="gloria" title="Gloria">
+      <s2 id="lit-gloria" title="Gloria">
          <c id="gloria-1"/>
          <c id="gloria-2"/>
+         <c id="gloria-3"/>
       </s2>
       <s2 id="schriftlezingen" title="Schriftlezingen">
          <c id="schriftlezingen-1"/>
@@ -179,9 +181,10 @@
          <c id="sursum-corda-1"/>
          <c id="sursum-corda-2"/>
       </s2>
-      <s2 id="sanctus" title="Sanctus">
+      <s2 id="lit-sanctus" title="Sanctus">
          <c id="sanctus-1"/>
          <c id="sanctus-2"/>
+         <c id="sanctus-3"/>
       </s2>
       <s2 id="mysterium-fidei" title="Mysterium fidei">
          <c id="mysterium-fidei-1"/>
@@ -194,6 +197,7 @@
       <s2 id="onzevader" title="Onze Vader">
          <c id="onzevader-1"/>
          <c id="onzevader-2"/>
+         <c id="pater-noster-1"/>
          <c id="onzevader-3"/>
          <c id="onzevader-4"/>
          <c id="onzevader-5"/>
@@ -201,6 +205,7 @@
       <s2 id="agnus-dei" title="Agnus Dei">
          <c id="agnus-dei-1"/>
          <c id="agnus-dei-2"/>
+         <c id="agnus-dei-3"/>
       </s2>
       <s2 id="ite-missa-est" title="Ite missa est">
          <c id="ite-missa-est-1"/>
@@ -251,7 +256,8 @@
       </s2>
       <s2 id="pangelingua" title="Pange, língua">
          <c id="pangelingua-1"/>
-         <c id="pangelingua-2"/>
+         <c id="pange-lingua-2"/>
+         <c id="pange-lingua-3"/>
       </s2>
       <s2 id="psalm150" title="Psalm 150">
          <c id="psalm150-1"/>
