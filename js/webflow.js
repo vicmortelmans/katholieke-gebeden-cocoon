@@ -1104,6 +1104,8 @@ Webflow.define('webflow-scroll', function ($) {
     if (loc.hash) {
       findEl(loc.hash.substring(1));
     }
+/*
+// Vic disabled this, because it eats anchor links
 
     // When clicking on a link, check if it links to another part of the page
     $doc.on('click', 'a', function(e) {
@@ -1119,6 +1121,7 @@ Webflow.define('webflow-scroll', function ($) {
         findEl(hash, e);
       }
     });
+*/
   }
   
   function findEl(hash, e) {

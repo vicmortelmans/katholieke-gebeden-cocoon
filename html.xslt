@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
   <xsl:template match="gedenk">
     <html>
       <head>
@@ -34,9 +34,11 @@
       </head>
       <body>
         <div class="splash"></div>
-        <header class="row">
-          <div><xsl:value-of select="@title"/></div>
-        </header>
+        <a href="#">
+          <header class="row">
+            <div><xsl:value-of select="@title"/></div>
+          </header>
+        </a>
 
         <div class="w-container ruimte boven row"></div>
     
@@ -64,7 +66,9 @@
 
   <xsl:template match="s1">
     <div class="w-container item row">
-      <h1 class="init" id="{@id}"><span><xsl:value-of select="@title"/></span></h1>
+      <a href="#{@id}">
+        <h1 class="init" id="{@id}"><span><xsl:value-of select="@title"/></span></h1>
+      </a>
       <div class="toc">
 
         <xsl:apply-templates/>
@@ -75,7 +79,9 @@
 
   <xsl:template match="s2">
     <div class="w-container item">
-      <h2 class="init" id="{@id}"><span><xsl:value-of select="@title"/></span></h2>
+      <a href="#{@id}">
+        <h2 class="init" id="{@id}"><span><xsl:value-of select="@title"/></span></h2>
+      </a>
       <div class="content init">
         <div class="w-slider slider" data-animation="slide" data-duration="500" data-infinite="1">
           <div class="w-slider-mask slide-mask">

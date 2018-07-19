@@ -136,7 +136,7 @@ function h1OnClick(h1) {
   expansion = 1;
   var newExpansion = expansion;
   // lazy load all images beneath this header
-  var lazy = $(h1).parent().find('img');
+  var lazy = $(h1).parent().parent().find('img');
   console.log('Found ' + lazy.length + ' lazy images');
   lazy.each(function() {
     if ($(this).attr('data-src')) {
@@ -175,17 +175,22 @@ function h1OnClick(h1) {
     // update history
     if (newExpansion > oldExpansion) {
       window.history.pushState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
+    } else if (newExpansion < oldExpansion) {
+      window.history.back();
+      window.history.replaceState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
     } else {
       window.history.replaceState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
     }
   }
-  var h2sToShow = $(h1).parent().find('h2');
+  var h2sToShow = $(h1).parent().parent().find('h2');
   // show the h2's in this h1
   h2sToShow.addClass('listed');
   TweenLite.to(h2sToShow,1,{height:48});
 }
 function h2OnClick(h2) {
+  var oldExpansion = expansion;
   expansion = 2;
+  var newExpansion = expansion;
   // show this content and hide all other
   // (assumption: the parent h1 is already selected)
   // only do the following if the clicked h2 was not the open one
@@ -203,24 +208,34 @@ function h2OnClick(h2) {
         openContent.removeClass('showing');
         // change that h2 to listed
         openH2.removeClass('selected').addClass('listed');
+        // change the link on that h2 back to its own id
+        var openH2Anchor = openH2.parent();
+        openH2Anchor.attr('href', openH2Anchor.attr('data-href'));
         // align to top of the screen (based on advise from TweenLite forum)
         TweenLite.set(window, {scrollTo: scrollTargetHash});
       }
     });
     // change this h2 to selected
     $(h2).removeClass('listed').addClass('selected');
-    var contentToShow = $(h2).siblings('.content');
+    var contentToShow = $(h2).parent().siblings('.content');
     var contentToShowHeight = contentToShow.get(0).scrollHeight;
     var screenHeight = $(window).innerHeight();
     // show the content
     contentToShow.addClass('showing');
     TweenLite.to(contentToShow,1,{height:Math.max(contentToShowHeight, screenHeight)});
+    // change the link on this h2 to point to the next h2
+    var H2Anchor = $(h2).parent();
+    H2Anchor.attr('data-href', H2Anchor.attr('href'));
+    var nextH2 = H2Anchor.parent().next().find('h2');
+    if (nextH2.length) H2Anchor.attr('href', '#' + nextH2.attr('id'));
     // update history
-    window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
-  } else {
-    // select the next h2 (if any)
-    nextH2 = $(h2).parent().next().find('h2');
-    if (nextH2.length) h2OnClick(nextH2);
+    if (newExpansion > oldExpansion) {
+      window.history.pushState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
+    } else {
+      window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
+    }
+    // update history
+//    window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
   }
 }
 
@@ -229,15 +244,15 @@ var Webflow = Webflow || [];
 Webflow.push(function () { 
   var speed = 0.90;
   var speedLast = 0.90;
-  $('header').on('click', function() {
-    headerOnClick(this);
-  });
-  $('h1').on('click', function() {
-    h1OnClick(this);
-  });
-  $('h2').on('click', function() {
-    h2OnClick(this);
-  });
+//  $('header').on('click', function() {
+//    headerOnClick(this);
+//  });
+//  $('h1').on('click', function() {
+//    h1OnClick(this);
+//  });
+//  $('h2').on('click', function() {
+//    h2OnClick(this);
+//  });
   $('.content').on('click', function() {
       // workaround for webflow sliders not being aligned properly
       // when being rendered while part of hidden content.
@@ -246,28 +261,38 @@ Webflow.push(function () {
       // so this one ends up as most elegant.
       $(window).trigger('resize');
   });
-  var navigateToHash = function() {
-    var preset = window.location.hash;
-    if (preset) {
-      var presetHeader = $(preset);
+  var navigateToHash = function(hash) {
+    if (hash && hash != '#') {
+      var presetHeader = $(hash);
       if (presetHeader.is('h1')) {
         h1OnClick(presetHeader);
       } else {
-        var presetH1 = presetHeader.parents().children('h1');
-        h1OnClick(presetH1);
+        var presetH1 = presetHeader.parents('.row').find('h1');
+        var timeout; // based on experimenting
+        if (presetH1.hasClass('selected')) {
+          timeout = 0;
+        } else {
+          h1OnClick(presetH1);
+          timeout = 1400;
+        }
         window.setTimeout(function() {
           h2OnClick(presetHeader);
-        }, 1400); // based on experimenting
+        }, timeout);
       }
     } else {
       headerOnClick($('header'));
     }
   };
-  navigateToHash();
-  $(window).on('hashchange', navigateToHash);
+  navigateToHash(window.location.hash);
+//  $(window).on('hashchange', navigateToHash);
+  $(window).on('hashchange', function() {
+//    window.history.replaceState({}, "Katholieke Gebeden", window.location.hash);
+    navigateToHash(window.location.hash);
+    return false;
+  });
   $('body').on('click', 'a[href*="#"]', function() {
-    window.history.replaceState({}, "Katholieke Gebeden", this.hash);
-    navigateToHash();
+//    window.history.replaceState({}, "Katholieke Gebeden", this.hash);
+    navigateToHash(this.hash);
     return false;
   });
   if (isphone) {
@@ -276,7 +301,7 @@ Webflow.push(function () {
       if (anchor) {
         var header = $(anchor);
         var title = header.text().replace(/^\s*|\s*$/g, "");
-        var text = header.parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
+        var text = header.parent().parent().find('p').first().text().replace(/[ \t]+/g, " ").replace(/^\s*|\s*$/g, "");
         if (text.length == 0) {
           text = title;
         }
