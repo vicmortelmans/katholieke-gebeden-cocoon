@@ -234,8 +234,6 @@ function h2OnClick(h2) {
     } else {
       window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
     }
-    // update history
-//    window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
   }
 }
 
@@ -244,15 +242,6 @@ var Webflow = Webflow || [];
 Webflow.push(function () { 
   var speed = 0.90;
   var speedLast = 0.90;
-//  $('header').on('click', function() {
-//    headerOnClick(this);
-//  });
-//  $('h1').on('click', function() {
-//    h1OnClick(this);
-//  });
-//  $('h2').on('click', function() {
-//    h2OnClick(this);
-//  });
   $('.content').on('click', function() {
       // workaround for webflow sliders not being aligned properly
       // when being rendered while part of hidden content.
@@ -284,14 +273,11 @@ Webflow.push(function () {
     }
   };
   navigateToHash(window.location.hash);
-//  $(window).on('hashchange', navigateToHash);
   $(window).on('hashchange', function() {
-//    window.history.replaceState({}, "Katholieke Gebeden", window.location.hash);
     navigateToHash(window.location.hash);
     return false;
   });
   $('body').on('click', 'a[href*="#"]', function() {
-//    window.history.replaceState({}, "Katholieke Gebeden", this.hash);
     navigateToHash(this.hash);
     return false;
   });
