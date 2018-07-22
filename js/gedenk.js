@@ -2,6 +2,7 @@ var rowH;
 var bgImage;
 var isphone = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
 var expansion = 0;
+var history_back = 1;
 
 if (isphone) {
   // do the cordova stuff
@@ -98,9 +99,6 @@ $(function() {
         // something to do only on app
         $('.slide-arrow').width(0);
         $('#play').hide();
-//        document.addEventListener("deviceready", function(){
-//      		navigator.splashscreen.hide();
-//        }, false);
     }
     // download and display the readings for today
     var readingsUrl = "https://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
@@ -129,12 +127,10 @@ function headerOnClick(header) {
   TweenLite.to(openH1,1,{height:rowH});
   openH1.removeClass('selected');
   // update history
-  window.history.replaceState({}, "Katholieke Gebeden", "#");
+  window.history.replaceState({level: 0}, "Katholieke Gebeden", "#");
 }
 function h1OnClick(h1) {
-  var oldExpansion = expansion;
   expansion = 1;
-  var newExpansion = expansion;
   // lazy load all images beneath this header
   var lazy = $(h1).parent().parent().find('img');
   console.log('Found ' + lazy.length + ' lazy images');
@@ -173,14 +169,7 @@ function h1OnClick(h1) {
     openH1.removeClass('selected')
     $(h1).addClass('selected');
     // update history
-    if (newExpansion > oldExpansion) {
-      window.history.pushState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
-    } else if (newExpansion < oldExpansion) {
-      window.history.back();
-      window.history.replaceState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
-    } else {
-      window.history.replaceState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
-    }
+    window.history.replaceState({level: 1}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
   }
   var h2sToShow = $(h1).parent().parent().find('h2');
   // show the h2's in this h1
@@ -188,9 +177,7 @@ function h1OnClick(h1) {
   TweenLite.to(h2sToShow,1,{height:48});
 }
 function h2OnClick(h2) {
-  var oldExpansion = expansion;
   expansion = 2;
-  var newExpansion = expansion;
   // show this content and hide all other
   // (assumption: the parent h1 is already selected)
   // only do the following if the clicked h2 was not the open one
@@ -229,11 +216,7 @@ function h2OnClick(h2) {
     var nextH2 = H2Anchor.parent().next().find('h2');
     if (nextH2.length) H2Anchor.attr('href', '#' + nextH2.attr('id'));
     // update history
-    if (newExpansion > oldExpansion) {
-      window.history.pushState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
-    } else {
-      window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
-    }
+    window.history.replaceState({level: 2}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
   }
 }
 
@@ -272,12 +255,30 @@ Webflow.push(function () {
       headerOnClick($('header'));
     }
   };
+  window.history.pushState({}, window.document.title, window.location.hash); 
   navigateToHash(window.location.hash);
-  $(window).on('hashchange', function() {
-    navigateToHash(window.location.hash);
+  $(window).on('popstate', function(event) {
+    // back button
+    history_back -= 1;
+    if (expansion >= 1 && history_back < 1) {
+      window.history.pushState({}, window.document.title, window.location.hash); 
+      history_back += 1;
+      // ...this way the back button doesn't leave the site at once
+    }
+    if (expansion == 2) {
+      // find the parent h1 and navigate there
+      var openH1 = $('h1.selected'); 
+      navigateToHash("#" + openH1.attr('id'));
+    } else if (expansion == 1) {
+      // collapse everything
+      navigateToHash("#");
+    } else { // expansion == 0
+      // allow browser to leave the site
+    }
     return false;
   });
-  $('body').on('click', 'a[href*="#"]', function() {
+  $('body').on('click', 'a[href*="#"]', function(event) {
+    event.preventDefault();
     navigateToHash(this.hash);
     return false;
   });
