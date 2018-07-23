@@ -127,7 +127,7 @@ function headerOnClick(header) {
   TweenLite.to(openH1,1,{height:rowH});
   openH1.removeClass('selected');
   // update history
-  window.history.replaceState({level: 0}, "Katholieke Gebeden", "#");
+  window.history.replaceState({}, "Katholieke Gebeden", "#");
 }
 function h1OnClick(h1) {
   expansion = 1;
@@ -168,13 +168,13 @@ function h1OnClick(h1) {
     showingH2s.removeClass('listed').removeClass('selected');
     openH1.removeClass('selected')
     $(h1).addClass('selected');
-    // update history
-    window.history.replaceState({level: 1}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
   }
   var h2sToShow = $(h1).parent().parent().find('h2');
   // show the h2's in this h1
   h2sToShow.addClass('listed');
   TweenLite.to(h2sToShow,1,{height:48});
+  // update history
+  window.history.replaceState({}, "Katholieke Gebeden" + $(h1).text(), "#" + $(h1).attr('id'));
 }
 function h2OnClick(h2) {
   expansion = 2;
@@ -216,7 +216,7 @@ function h2OnClick(h2) {
     var nextH2 = H2Anchor.parent().next().find('h2');
     if (nextH2.length) H2Anchor.attr('href', '#' + nextH2.attr('id'));
     // update history
-    window.history.replaceState({level: 2}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
+    window.history.replaceState({}, "Katholieke Gebeden" + $(h2).text(), "#" + $(h2).attr('id'));
   }
 }
 
