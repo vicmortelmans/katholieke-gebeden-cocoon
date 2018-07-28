@@ -6,6 +6,8 @@
   <property name="articles" location="articles"/>
   <property name="toc" location="toc.xml"/>
   <property name="html" location="html"/>
+  <property name="redirect" location="redirect"/>
+  <property name="sitemap" location="sitemap.txt"/>
   <property name="index" location="index.html"/>
   <property name="eager" location="eager-index.html"/>
 
@@ -45,6 +47,9 @@
     <xslt in="${eager}" out="${index}"
       style="lazy.xslt">
     </xslt>
+    <xslt in="${eager}" out="${sitemap}"
+      style="redirect.xslt">
+    </xslt>
     <delete file="${eager}"/>
   </target>
     
@@ -53,6 +58,7 @@
     <!-- Delete the ${html} directory tree -->
     <delete includeEmptyDirs="true">
       <fileset dir="${html}" includes="**/*" defaultexcludes="no"/>
+      <fileset dir="${redirect}" includes="**/*" defaultexcludes="no"/>
     </delete>
   </target>
 </project>
