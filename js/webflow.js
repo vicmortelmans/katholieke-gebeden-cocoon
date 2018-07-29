@@ -559,7 +559,7 @@ Webflow.define('webflow-touch', function ($, _) {
   (function () {
     var supr = Tap.prototype;
     var proto = Swipe.prototype = Object.create(supr);
-    var threshold = Math.round(screen.width * 0.04) || 20;
+    var threshold = Math.round(screen.width * 0.08) || 20;  // was 0.04, but that was too sensitive
     if (threshold > 40) threshold = 40;
     
     proto.start = function (e) {

@@ -96,10 +96,14 @@ $(function() {
     // hide the splash screen
     $('.splash').hide();
     if (isphone) {
-        // something to do only on app
-        $('.slide-arrow').width(0);
-        $('#play').hide();
+      // something to do only on app
+      $('.slide-arrow').width(0);
+      $('#play').hide();
     }
+    $(window).on('touchstart', function() {
+      // something to do only when touchscreen is available
+      $('.slide-arrow').width(0);
+    });
     // download and display the readings for today
     var readingsUrl = "https://catecheserooster.appspot.com/yql/text?callback=?&url=http%3A//feed.evangelizo.org/v2/reader.php%3Ftype%3Dall%26lang%3DNL";
     $.getJSON(readingsUrl, function(d){
