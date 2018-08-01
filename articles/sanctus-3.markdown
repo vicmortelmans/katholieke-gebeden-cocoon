@@ -1,1 +1,1 @@
-[Ga naar het Kyriale om de toonzettingen te bekijken](#kyriale)
+[Ga naar het Kyriale om de toonzettingen te bekijken](#h1-kyriale)

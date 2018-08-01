@@ -259,13 +259,13 @@ Webflow.push(function () {
       headerOnClick($('header'));
     }
   };
-  window.history.pushState({}, window.document.title, window.location.hash); 
+  window.history.pushState({}, window.document.title, decodeURIComponent(window.location.hash)); 
   navigateToHash(window.location.hash);
   $(window).on('popstate', function(event) {
     // back button
     history_back -= 1;
     if (expansion >= 1 && history_back < 1) {
-      window.history.pushState({}, window.document.title, window.location.hash); 
+      window.history.pushState({}, window.document.title, decodeURIComponent(window.location.hash)); 
       history_back += 1;
       // ...this way the back button doesn't leave the site at once
     }
@@ -283,12 +283,12 @@ Webflow.push(function () {
   });
   $('body').on('click', 'a[href*="#"]', function(event) {
     event.preventDefault();
-    navigateToHash(this.hash);
+    navigateToHash(decodeURIComponent(this.hash));
     return false;
   });
   if (isphone) {
     $('#share').on('click', function() {
-      var anchor = window.location.hash;
+      var anchor = decodeURIComponent(window.location.hash);
       if (anchor) {
         var header = $(anchor);
         var title = header.text().replace(/^\s*|\s*$/g, "");
@@ -325,5 +325,20 @@ Webflow.push(function () {
       cordova.InAppBrowser.open("http://gelovenleren.net/blog/gebeden-app/", '_blank', 'location=yes');
     });
   }
+  setInterval(function() {
+    if (navigator.onLine) {
+      $('audio').show();
+    } else {
+      $('audio').hide();
+    }
+  }, 1000);
+  $('audio').on('play', function() {
+    var active_audio = this;
+    $('audio').each(function() {
+      if (this != active_audio) {
+        this.pause();
+      }
+    });
+  });
 });
 
