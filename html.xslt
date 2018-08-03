@@ -19,7 +19,7 @@
         <script>
             if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
         </script>
-        <link rel="shortcut icon" type="image/x-icon" href="icon.png"></link>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"></link>
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://gebeden.gelovenleren.net/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://gebeden.gelovenleren.net/apple-touch-icon-114x114.png" />
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://gebeden.gelovenleren.net/apple-touch-icon-72x72.png" />
