@@ -260,7 +260,7 @@ Webflow.push(function () {
     }
   };
   window.history.pushState({}, window.document.title, decodeURIComponent(window.location.hash)); 
-  navigateToHash(window.location.hash);
+  navigateToHash(decodeURIComponent(window.location.hash));
   $(window).on('popstate', function(event) {
     // back button
     history_back -= 1;
