@@ -12,7 +12,7 @@ Petrus en Paulus, alle heiligen en u, broeders, dat ik zeer gezondigd
 heb door gedachten, woorden en werken: door mijn schuld, door mijn
 schuld, door mijn allergrootste schuld. Daarom bid ik de H. Maria,
 altijd Maagd, de H. Aartsengel Michaël, de H. Joannes de Doper, de
-Heilige Apos-telen Petrus en Paulus, alle heiligen en u, broeders, voor
+Heilige Apostelen Petrus en Paulus, alle heiligen en u, broeders, voor
 mij te bidden tot de Heer, onze God.
 
 **V**Moge de almachtige God zich over ons \[u\] ontfermen, onze \[uw\]

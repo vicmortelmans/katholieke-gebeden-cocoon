@@ -1102,7 +1102,7 @@ Webflow.define('webflow-scroll', function ($) {
   function ready() {
     // If hash is already present on page load, scroll to it right away
     if (loc.hash) {
-      findEl(loc.hash.substring(1));
+      findEl(decodeURI(loc.hash.substring(1)));
     }
 /*
 // Vic disabled this, because it eats anchor links
