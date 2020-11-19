@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+   <categories id="h1-gregoriaanse-liederen" title="Gregoriaanse Gebeden">
+      <prayers id="h2-alma-redemptoris-mater" title="Alma Redemptoris Mater">
+         <presentations>alma-redemptoris-mater-1</presentations>
+         <presentations>alma-redemptoris-mater-2</presentations>
+         <presentations>alma-redemptoris-mater-3</presentations>
+      </prayers>
+      <prayers id="h2-sub-tuum-præsidium" title="Sub Tuum Præsidium">
+         <presentations>sub-tuum-præsidium-1</presentations>
+         <presentations>sub-tuum-præsidium-2</presentations>
+         <presentations>sub-tuum-præsidium-3</presentations>
+      </prayers>
+      <prayers id="h2-ave-regina-cælorum" title="Ave Regina Cælorum">
+         <presentations>ave-regina-cælorum-1</presentations>
+         <presentations>ave-regina-cælorum-2</presentations>
+         <presentations>ave-regina-cælorum-3</presentations>
+      </prayers>
+      <prayers id="h2-regina-cæli" title="Regina Cæli">
+         <presentations>regina-cæli-1</presentations>
+         <presentations>regina-cæli-2</presentations>
+         <presentations>regina-cæli-3</presentations>
+      </prayers>
+      <prayers id="h2-salve-regina" title="Salve Regina">
+         <presentations>salve-regina-1</presentations>
+         <presentations>salve-regina-2</presentations>
+         <presentations>salve-regina-3</presentations>
+      </prayers>
+      <prayers id="h2-pange-lingua" title="Pange Lingua (Tantum Ergo)">
+         <presentations>pange-lingua-1</presentations>
+         <presentations>pange-lingua-2</presentations>
+      </prayers>
+      <prayers id="h2-adoro-te-devote" title="Adoro te devote">
+         <presentations>adoro-te-devote-1</presentations>
+         <presentations>adoro-te-devote-2</presentations>
+      </prayers>
+      <prayers id="h2-veni-creator-spiritus" title="Veni Creator Spiritus">
+         <presentations>veni-creator-spiritus-1</presentations>
+         <presentations>veni-creator-spiritus-2</presentations>
+      </prayers>
+      <prayers id="h2-te-ioseph-celebrent" title="Te Ioseph celebrent">
+         <presentations>te-ioseph-celebrent-1</presentations>
+         <presentations>te-ioseph-celebrent-2</presentations>
+      </prayers>
+      <prayers id="h2-ave-maria" title="Ave Maria">
+         <presentations>ave-maria-1</presentations>
+         <presentations>ave-maria-2</presentations>
+         <presentations>ave-maria-3</presentations>
+      </prayers>
+      <prayers id="h2-pater-noster" title="Pater Noster">
+         <presentations>pater-noster-1</presentations>
+         <presentations>pater-noster-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-kyriale" title="Kyriale">
+      <prayers id="h2-kyriale-asperges-me" title="Asperges me">
+         <presentations>kyriale-asperges-me-1</presentations> 
+      </prayers>
+      <prayers id="h2-kyriale-vidi-aquam" title="Vidi aquam">
+         <presentations>kyriale-vidi-aquam-1</presentations> 
+      </prayers>
+      <prayers id="h2-mass-i" title="Mis I Lux et origo (Paastijd)">
+         <presentations>mass-i-kyrie</presentations> 
+         <presentations>mass-i-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-ii" title="Mis II Kyrie fons bonitatis">
+         <presentations>mass-ii-kyrie</presentations>
+         <presentations>mass-ii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-iii" title="Mis III Kyrie Deus sempiterne (hoogfeesten)">
+         <presentations>mass-iii-kyrie</presentations>
+         <presentations>mass-iii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-iv" title="Mis IV Cunctipotens Genitor Deus (Apostelfeesten)">
+         <presentations>mass-iv-kyrie</presentations>
+         <presentations>mass-iv-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-v" title="Mis V Kyrie magnæ Deus potentiæ">
+         <presentations>mass-v-kyrie</presentations>
+         <presentations>mass-v-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-vi" title="Mis VI Kyrie Rex Genitor">
+         <presentations>mass-vi-kyrie</presentations>
+         <presentations>mass-vi-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-vii" title="Mis VII Kyrie Rex splendens">
+         <presentations>mass-vii-kyrie</presentations>
+         <presentations>mass-vii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-viii" title="Mis VIII De Angelis">
+         <presentations>mass-viii-kyrie</presentations>
+         <presentations>mass-viii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-ix" title="Mis IX Cum jubilo (hoogdagen en mariafeesten)">
+         <presentations>mass-ix-kyrie</presentations>
+         <presentations>mass-ix-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-x" title="Mis X Alme Pater (mariafeesten)">
+         <presentations>mass-x-kyrie</presentations>
+         <presentations>mass-x-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xi" title="Mis XI Orbis factor (zondagen doorheen het jaar)">
+         <presentations>mass-xi-kyrie</presentations>
+         <presentations>mass-xi-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xii" title="Mis XII Pater cuncta">
+         <presentations>mass-xii-kyrie</presentations>
+         <presentations>mass-xii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xiii" title="Mis XIII Stelliferi Conditor orbis">
+         <presentations>mass-xiii-kyrie</presentations>
+         <presentations>mass-xiii-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xiv" title="Mis XIV Jesu redemptor">
+         <presentations>mass-xiv-kyrie</presentations>
+         <presentations>mass-xiv-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xv" title="Mis XV Dominator Deus">
+         <presentations>mass-xv-kyrie</presentations>
+         <presentations>mass-xv-gloria</presentations>
+      </prayers>
+      <prayers id="h2-mass-xvi" title="Mis XVI (weekdagen in de tijd doorheen het jaar)">
+         <presentations>mass-xvi-kyrie</presentations>
+      </prayers>
+      <prayers id="h2-mass-xvii" title="Mis XVII (zondagen in Advent en Vasten)">
+         <presentations>mass-xvii-kyrie</presentations>
+      </prayers>
+      <prayers id="h2-mass-xviii" title="Mis XVIII Deus Genitor alme (weekdagen in Advent en Vasten, Requiemmis)">
+         <presentations>mass-xviii-kyrie</presentations>
+      </prayers>
+      <prayers id="h2-kyriale-credo" title="Credo I-II-III-IV-V-VI-VII">
+         <presentations>credo-i</presentations>
+         <presentations>credo-ii</presentations>
+         <presentations>credo-iii</presentations>
+         <presentations>credo-iv</presentations>
+         <presentations>credo-v</presentations>
+         <presentations>credo-vi</presentations>
+         <presentations>credo-vii</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-liturgische-gebeden" title="Liturgische gebeden">
+      <prayers id="h2-asperges-me" title="Asperges me">
+         <presentations>asperges-me-1</presentations>
+         <presentations>asperges-me-2</presentations>
+         <presentations>asperges-me-3</presentations>
+      </prayers>
+      <prayers id="h2-vidi-aquam" title="Vidi aquam">
+         <presentations>vidi-aquam-1</presentations>
+         <presentations>vidi-aquam-2</presentations>
+         <presentations>vidi-aquam-3</presentations>
+      </prayers>
+      <prayers id="h2-ostende-nobis" title="Ostende nobis">
+         <presentations>ostende-nobis-1</presentations>
+         <presentations>ostende-nobis-2</presentations>
+      </prayers>
+      <prayers id="h2-kruisteken" title="Kruisteken">
+         <presentations>kruisteken-1</presentations>
+         <presentations>kruisteken-2</presentations>
+      </prayers>
+      <prayers id="h2-introibo" title="Introibo">
+         <presentations>introibo-1</presentations>
+         <presentations>introibo-2</presentations>
+      </prayers>
+      <prayers id="h2-confiteor" title="Confiteor">
+         <presentations>confiteor-1</presentations>
+         <presentations>confiteor-2</presentations>
+      </prayers>
+      <prayers id="h2-misericordiam" title="Misericordiam">
+         <presentations>misericordiam-1</presentations>
+         <presentations>misericordiam-2</presentations>
+      </prayers>
+      <prayers id="h2-lit-kyrie" title="Kyrie">
+         <presentations>kyrie-1</presentations>
+         <presentations>kyrie-2</presentations>
+         <presentations>kyrie-3</presentations>
+      </prayers>
+      <prayers id="h2-lit-gloria" title="Gloria">
+         <presentations>gloria-1</presentations>
+         <presentations>gloria-2</presentations>
+         <presentations>gloria-3</presentations>
+      </prayers>
+      <prayers id="h2-schriftlezingen" title="Schriftlezingen">
+         <presentations>schriftlezingen-1</presentations>
+      </prayers>
+      <prayers id="h2-twaalfartikelenvanhetgeloof" title="Credo van de apostelen">
+         <presentations>twaalfartikelenvanhetgeloof-1</presentations>
+         <presentations>twaalfartikelenvanhetgeloof-2</presentations>
+      </prayers>
+      <prayers id="h2-credo" title="Credo">
+         <presentations>credo-1</presentations>
+         <presentations>credo-2</presentations>
+         <presentations>credo-3</presentations>
+      </prayers>
+      <prayers id="h2-offertorium" title="Offertorium">
+         <presentations>offertorium-1</presentations>
+         <presentations>offertorium-2</presentations>
+      </prayers>
+      <prayers id="h2-sursum-corda" title="Sursum corda">
+         <presentations>sursum-corda-1</presentations>
+         <presentations>sursum-corda-2</presentations>
+      </prayers>
+      <prayers id="h2-lit-sanctus" title="Sanctus">
+         <presentations>sanctus-1</presentations>
+         <presentations>sanctus-2</presentations>
+         <presentations>sanctus-3</presentations>
+      </prayers>
+      <prayers id="h2-mysterium-fidei" title="Mysterium fidei">
+         <presentations>mysterium-fidei-1</presentations>
+         <presentations>mysterium-fidei-2</presentations>
+      </prayers>
+      <prayers id="h2-per-ipsum" title="Per Ipsum">
+         <presentations>per-ipsum-1</presentations>
+         <presentations>per-ipsum-2</presentations>
+      </prayers>
+      <prayers id="h2-onzevader" title="Onze Vader">
+         <presentations>onzevader-1</presentations>
+         <presentations>onzevader-2</presentations>
+         <presentations>pater-noster-1</presentations>
+         <presentations>onzevader-3</presentations>
+         <presentations>onzevader-4</presentations>
+         <presentations>onzevader-5</presentations>
+      </prayers>
+      <prayers id="h2-agnus-dei" title="Agnus Dei">
+         <presentations>agnus-dei-1</presentations>
+         <presentations>agnus-dei-2</presentations>
+         <presentations>agnus-dei-3</presentations>
+      </prayers>
+      <prayers id="h2-ite-missa-est" title="Ite missa est">
+         <presentations>ite-missa-est-1</presentations>
+         <presentations>ite-missa-est-2</presentations>
+      </prayers>
+      <prayers id="h2-ultimam-evangelium" title="Ultimam Evangelium">
+         <presentations>ultimam-evangelium-1</presentations>
+         <presentations>ultimam-evangelium-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-drie-eenheid" title="Drie-eenheid">
+      <prayers id="h2-quicumque" title="Sýmbolum Athanasiánum">
+         <presentations>quicumque-1</presentations>
+         <presentations>quicumque-2</presentations>
+      </prayers>
+      <prayers id="h2-tedeum" title="Te Deum">
+         <presentations>tedeum-1</presentations>
+         <presentations>tedeum-2</presentations>
+      </prayers>
+      <prayers id="h2-trisagion" title="Triságium angélicum">
+         <presentations>trisagion-1</presentations>
+         <presentations>trisagion-2</presentations>
+      </prayers>
+      <prayers id="h2-berouw" title="Akte van berouw">
+         <presentations>berouw-1</presentations>
+         <presentations>berouw-2</presentations>
+      </prayers>
+      <prayers id="h2-liefde" title="Akte van liefde">
+         <presentations>liefde-1</presentations>
+         <presentations>liefde-2</presentations>
+      </prayers>
+      <prayers id="h2-hoop" title="Akte van hoop">
+         <presentations>hoop-1</presentations>
+         <presentations>hoop-2</presentations>
+      </prayers>
+      <prayers id="h2-geloof" title="Akte van geloof">
+         <presentations>geloof-1</presentations>
+         <presentations>geloof-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-aanbidding" title="Aanbidding">
+      <prayers id="h2-geestelijkecommunie" title="Gebed voor de geestelijke communie">
+         <presentations>geestelijkecommunie-1</presentations>
+      </prayers>
+      <prayers id="h2-adorotedevote" title="Adoro te devote">
+         <presentations>adorotedevote-1</presentations>
+         <presentations>adorotedevote-2</presentations>
+      </prayers>
+      <prayers id="h2-pangelingua" title="Pange, língua">
+         <presentations>pangelingua-1</presentations>
+         <presentations>pange-lingua-2</presentations>
+         <presentations>pange-lingua-3</presentations>
+      </prayers>
+      <prayers id="h2-psalm150" title="Psalm 150">
+         <presentations>psalm150-1</presentations>
+         <presentations>psalm150-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-heilige-geest" title="Heilige Geest">
+      <prayers id="h2-venisanctespiritus" title="Veni Sancte Spiritus">
+         <presentations>venisanctespiritus-1</presentations>
+         <presentations>venisanctespiritus-2</presentations>
+      </prayers>
+      <prayers id="h2-venicreator" title="Veni, Creátor">
+         <presentations>venicreator-1</presentations>
+         <presentations>venicreator-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-maria" title="Maagd Maria">
+      <prayers id="h2-engel" title="De Engel des Heren">
+         <presentations>engel-1</presentations>
+         <presentations>engel-2</presentations>
+      </prayers>
+      <prayers id="h2-gedenk" title="Gedenkgebed of Memorare">
+         <presentations>gedenk-1</presentations>
+         <presentations>gedenk-2</presentations>
+      </prayers>
+      <prayers id="h2-eeraandevader" title="Eer aan de Vader">
+         <presentations>eeraandevader-1</presentations>
+         <presentations>eeraandevader-2</presentations>
+      </prayers>
+      <prayers id="h2-weesgegroet" title="Wees gegroet">
+         <presentations>weesgegroet-1</presentations>
+         <presentations>weesgegroet-2</presentations>
+         <presentations>weesgegroet-3</presentations>
+      </prayers>
+      <prayers id="h2-rozenhoedje" title="Rozenhoedje">
+         <presentations>rozenhoedje-1</presentations>
+      </prayers>
+      <prayers id="h2-stabatmater" title="Stabat mater">
+         <presentations>stabatmater-1</presentations>
+         <presentations>stabatmater-2</presentations>
+      </prayers>
+      <prayers id="h2-litanievanloreto" title="Litanie van Loreto">
+         <presentations>litanievanloreto-1</presentations>
+         <presentations>litanievanloreto-2</presentations>
+      </prayers>
+   </categories>
+   <categories id="h1-voor-en-na-de-mis" title="Voor en na de Mis">
+      <prayers id="h2-gebedjozef" title="Gebed tot Sint Jozef">
+         <presentations>gebedjozef-1</presentations>
+         <presentations>gebedjozef-2</presentations>
+      </prayers>
+      <prayers id="h2-gebedambrosius" title="Gebed van Sint Ambrosius">
+         <presentations>gebedambrosius-1</presentations>
+         <presentations>gebedambrosius-2</presentations>
+      </prayers>
+      <prayers id="h2-gebedaquinovoordemis" title="Gebed van Thomas van Aquino">
+         <presentations>gebedaquinovoordemis-1</presentations>
+         <presentations>gebedaquinovoordemis-2</presentations>
+      </prayers>
+      <prayers id="h2-lofzangvandaniel" title="Lofzang van Daniël">
+         <presentations>lofzangvandaniel-1</presentations>
+         <presentations>lofzangvandaniel-2</presentations>
+      </prayers>
+      <prayers id="h2-gebedtotdeaartsengelmichael" title="Gebed tot de aartsengel Michaël">
+         <presentations>gebedtotdeaartsengelmichael-1</presentations>
+         <presentations>gebedtotdeaartsengelmichael-2</presentations>
+      </prayers>
+      <prayers id="h2-gebedaquinonademis" title="Gebed van Thomas van Aquino">
+         <presentations>gebedaquinonademis-1</presentations>
+         <presentations>gebedaquinonademis-2</presentations>
+      </prayers>
+      <prayers id="h2-psalm2" title="Psalm 2">
+         <presentations>psalm2-1</presentations>
+         <presentations>psalm2-2</presentations>
+      </prayers>
+      <prayers id="h2-universalis" title="Orátio universális (Clemens XI)">
+         <presentations>universalis-1</presentations>
+         <presentations>universalis-2</presentations>
+      </prayers>
+      <prayers id="h2-absoute" title="Absoute">
+         <presentations>absoute-1</presentations>
+         <presentations>absoute-2</presentations>
+      </prayers>
+   </categories>
+</root>
